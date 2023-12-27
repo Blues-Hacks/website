@@ -10,6 +10,9 @@ module.exports = {
     },
     extend: {
       colors: {
+        orange: {
+          400: '#FFA500', // or any orange shade you prefer
+        },
         brightRed: 'hsl(12, 88%, 59%)',
         brightRedLight: 'hsl(12, 88%, 69%)',
         brightRedSupLight: 'hsl(12, 88%, 95%)',
