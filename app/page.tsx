@@ -24,38 +24,10 @@ import { usePathname } from "next/navigation"
 //   },
 // }
 
-function updateTimer() {
-  var future = Date.parse("2024-01-19T14:00:00Z");
-  var now = new Date();
-  var diff = future - now;
-
-  var days = Math.floor(diff / (1000*60*60*24));
-  var hours = Math.floor(diff / (1000*60*60));
-  var mins = Math.floor(diff / (1000*60));
-  var secs = Math.floor(diff / 1000);
-
-  var d = days;
-  var h = hours - days * 24;
-  var m = mins - hours * 60;
-  var s = secs - mins * 60;
-
-  const timerElement = document.getElementById("timer");
-  if (timerElement) {
-      timerElement.innerHTML =
-          '<div class="flex flex-col items-center"><span class="text-4xl font-bold">' + d + '</span><span class="text-sm">days</span></div>' +
-          '<div class="flex flex-col items-center"><span class="text-4xl font-bold">' + h + '</span><span class="text-sm">hours</span></div>' +
-          '<div class="flex flex-col items-center"><span class="text-4xl font-bold">' + m + '</span><span class="text-sm">minutes</span></div>' +
-          '<div class="flex flex-col items-center"><span class="text-4xl font-bold">' + s + '</span><span class="text-sm">seconds</span></div>';
-  }
-
-}
-setInterval(updateTimer, 1000);
-
 export default function IndexPage() {
   return (
-    <section className="container grid grid-cols-10 items-center w-screen h-[80vh] align-middle">
-    {/* Left side (70%) */}
-    <div className="col-span-6 flex flex-col items-start gap-2">
+    <section className="container grid grid-cols-10 items-center w-[100vw] h-[80vh] md:align-middle">
+      <div className="col-span-10 md:col-span-6 flex flex-col items-start gap-2 p-4">
       <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
         Innovative Solutions Unleashed at <br className="hidden sm:inline" />
         Blues Hacks 2024.
@@ -77,18 +49,19 @@ export default function IndexPage() {
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
-        <Link
+        <a
           target="_blank"
-          rel="noreferrer"
-          href={siteConfig.links.github}
+          rel="noopener noreferrer"
+          href={siteConfig.links.pdf}
           className={buttonVariants({ variant: "outline" })}
         >
           Participant Package
-        </Link>
+        </a>
       </div>
     </div>
 
-    <div className="col-span-2 flex flex-col items-start">
+
+    <div className="col-span-10 md:col-span-2 flex flex-col items-end p-4">
       <Calendar
       mode="range"
       fromDate={new Date('2024-01-20')}
@@ -96,9 +69,14 @@ export default function IndexPage() {
       className="rounded-md border inline-block"
       />
     </div>
-    <div className="col-span-2 pl-10 flex flex-col items-start">
-      <div id="timer" className="flex flex-row gap-x-3"></div>
-    </div>
+
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.1071918498674!2d-79.40481302453493!3d43.666740451556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34bdf4e04f15%3A0x1fe96840ec66d333!2sUniversity%20of%20Toronto%20Schools!5e0!3m2!1sen!2sca!4v1705537995868!5m2!1sen!2sca"
+      width="300"
+      className="col-span-10 md:col-span-2 w-full md:h-[35vh] p-3 rounded-md border inline-block"
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade">
+      </iframe>
   </section>
   )
 }

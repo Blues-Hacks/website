@@ -10,6 +10,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import SplashScreen from "@/components/splashscreen"
 import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
+import Head from "next/head"
 
 interface RootLayoutProps {
   children: React.ReactNode
@@ -29,10 +30,24 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
       <html lang="en" suppressHydrationWarning>
-        <head />
+        <Head>
+          <title>{`${siteConfig.name} - Your Page Specific Title`}</title>
+          <meta name="description" content={siteConfig.description} />
+          
+          {/* Theme Color for Light and Dark Mode */}
+          <meta name="theme-color" content="white" media="(prefers-color-scheme: light)" />
+          <meta name="theme-color" content="black" media="(prefers-color-scheme: dark)" />
+
+          {/* Icons */}
+          <link rel="icon" href="/favicon.ico" />
+          <link rel="shortcut icon" href="/favicon-16x16.png" />
+          <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+          {/* Add more metadata tags as needed */}
+        </Head>
         <body
           className={cn(
-            "min-h-screen bg-background font-sans antialiased",
+            "min-h-screen overflow-x-hidden bg-background font-sans antialiased",
             fontSans.variable
           )}
         >{isLoading && isHome ? (
