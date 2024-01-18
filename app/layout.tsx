@@ -51,7 +51,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           )}
         >{isLoading && isHome ? (
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <SplashScreen finishLoading={() => setLoading(false)}/>
+            <SplashScreen finishLoading={() => {return setLoading(false)}}/>
           </ThemeProvider>
           ):
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
