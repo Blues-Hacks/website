@@ -5,10 +5,15 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { Coins, Slack, Terminal, X } from "lucide-react"
+import { Coins, Slack, Terminal, X, Siren } from "lucide-react"
 
 export default function UpdatePage() {
     const alerts = [
+        {
+            icon: <Siren className="h-4 w-4"/>,
+            title: "Prompt Released",
+            description: "Check your emails for the prompt! Happy Hacking!"
+        },
         {
             icon: <Slack className="h-4 w-4"/>,
             title: "Join Slack",

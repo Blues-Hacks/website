@@ -5,9 +5,10 @@ import { buttonVariants } from "@/components/ui/button"
 import FullCalendar from "@fullcalendar/react"
 import timeGridPlugin from '@fullcalendar/timegrid'
 import { Calendar } from "@fullcalendar/core"
+import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from "react"
 
 
-function renderEventContent(eventInfo) {
+function renderEventContent(eventInfo: { timeText: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; event: { title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined } }) {
   return (
     <>
       <b>{eventInfo.timeText}</b>
