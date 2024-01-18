@@ -1,6 +1,5 @@
 "use client"
 import Link from "next/link"
-
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"

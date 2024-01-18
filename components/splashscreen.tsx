@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import anime from "animejs";
 
-const SplashScreen = ({finishLoading}) => {
+const SplashScreen = (finishLoading: ()=>{}) => {
     const [isMounted, setMounted] = useState(false);
 
     const animate = () => {
