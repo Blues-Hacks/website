@@ -14,7 +14,6 @@ export default function UpdatePage() {
             Watch the Livestream here!
         </h6>
         <div className="h-[4vh]"></div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/KgnGh6Odpgc?si=8Zu_ui8VQI9St-4J" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-    </section>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/LyJ-LAK_Yvg?si=VtjrjaiPmtzl-ts6" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>    </section>
     )
 }
