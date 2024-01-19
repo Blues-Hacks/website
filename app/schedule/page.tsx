@@ -48,19 +48,19 @@ export default function SchedulePage() {
     {
       title: 'Teams will use Saturday as a full work day (online)',
       start: new Date('2024-01-20T09:00:00'),
-      end: new Date('2024-01-20T15:00:00')
+      end: new Date('2024-01-20T21:00:00')
     },
     {
       title: 'Judges Conference',
-      start: new Date('2024-01-20T15:00:00')
+      start: new Date('2024-01-21T15:00:00')
     },
     {
       title: 'Closing Ceremonies',
-      start: new Date('2024-01-20T16:00:00')
+      start: new Date('2024-01-21T16:00:00')
     },
     {
       title: 'Clean-up',
-      start: new Date('2024-01-20T17:00:00')
+      start: new Date('2024-01-21T17:00:00')
     },
     {
       title: 'Judges are debriefed',

@@ -17,6 +17,10 @@ export const siteConfig = {
       title: "Schedule",
       href: "/schedule",
     },
+    {
+      title: "Livestream",
+      href: "/livestream",
+    },
   ],
   links: {
     pdf: "file:///C:/Users/Owner/Documents/Coding/Projects/blues-hacks/blues-hacks/assets/Blues%20Hacks%20'24%20Participant%20Package.pdf",
